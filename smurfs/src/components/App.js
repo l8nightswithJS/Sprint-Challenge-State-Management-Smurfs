@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import SmurfData from './smurfData';
+
 class App extends Component {
   render() {
     return (
