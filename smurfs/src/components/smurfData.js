@@ -19,9 +19,16 @@ const SmurfData = props => {
             <div>loading data...</div>
           ) : (
             <>
-              <h1>Smurf name: {props.smurf.name}</h1>
-              <h1>Age: {props.smurf.age}</h1>
-              <h1>Height: {props.smurf.height}</h1>
+            {props.smurf.map(data => {
+                return(
+                    <div>    
+                    <h1>Smurf name: {data.name}</h1>
+                    <h1>Age: {data.age}</h1>
+                    <h1>Height: {data.height}</h1>
+                    </div>
+                )
+            })}
+              
             </>
           )}
         </>

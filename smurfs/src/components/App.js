@@ -9,7 +9,7 @@ class App extends Component {
       <div className="App">
         <h1>SMURFS! 2.0 W/ Redux</h1>
         <div>Have fun!</div>
-        <SmurfData></SmurfData>
+        <SmurfData />
         <SmurfsForm />
       </div>
     );

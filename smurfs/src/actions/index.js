@@ -8,19 +8,19 @@ export const ADD_NEW_SMURF = 'ADD_NEW_SMURF';
 export const addNewSmurf = (props) => dispatch => {
     console.log(props)
 
-    dispatch({ 
-        type: ADD_NEW_SMURF,
-        payload: props
-    });
-    // axios.post(`http://localhost:3333/smurfs/`, )
-    //   .then(res => {
-    //     dispatch({ 
-    //         type: ADD_NEW_SMURF,
-    //         payload: props.smurf
-    //     });  
-    //     console.log(res);
-    //     console.log(res.data);
-    //   })
+    // dispatch({ 
+    //     type: ADD_NEW_SMURF,
+    //     payload: props
+    // });
+    axios.post(`http://localhost:3333/smurfs/`, props )
+      .then(res => {
+        dispatch({ 
+            type: ADD_NEW_SMURF,
+            payload: res.data
+        });  
+        console.log(res);
+        console.log(res.data);
+      }).catch(err => console.log(err.message))
     
 }
 
@@ -30,19 +30,15 @@ export const getSmurfsData =  () => dispatch => {
     axios
         .get('http://localhost:3333/smurfs/')
         .then(res => {
-            res.data.map(i => {
                 dispatch(
                     {
                     type: SMURFS_LOADING_SUCCESS,
-                    payload: (res.data[i.id])
+                    payload: res.data
                     }
                 )
                 console.log(res.data);    
                 }
-            )
-        }) 
-            
-        .catch(err => console.log(err));
+        ).catch(err => console.log(err));
 }
 
 // export const thunk_action_creator = () => dispatch => {

@@ -5,8 +5,9 @@ const initialState = {
     smurf: [
         { 
             name: 'Brainey', 
-            age: 0, height: '', 
-            id: 0 
+            age: 0, 
+            height: '', 
+            id: Date.now()
         }
     ],
     isLoading: false,
@@ -24,13 +25,14 @@ export const reducer = (state = initialState, action) => {
         case SMURFS_LOADING_SUCCESS:
           return {
             ...state,
-            smurf: {...state.smurf.data, name:action.payload.name, age: action.payload.age, height: action.payload.height, id: Date.now() },
+            smurf: action.payload,
             isLoading: false
           };
         case ADD_NEW_SMURF:
             return {
                 ...state,
-                smurf: {...state.smurf.data, name: action.payload.name, age: action.payload.age, height: action.payload.height, id: Date.now()}
+                smurf: action.payload,
+                isLoading: false
             };  
         case SMURFS_LOADING_FAILED:
           return {
