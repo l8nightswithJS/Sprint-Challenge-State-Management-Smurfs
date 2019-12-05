@@ -18,6 +18,11 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 In this challenge, you are to build a Smurfs village utilizing context or Redux as your state management. Build this challenge from the ground up using what you have learned about state management.
 
+
+
+
+
+
 ## Self-Study/Essay Questions
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
@@ -46,6 +51,14 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
 
   My favorite was Store because It makes things easier when having to access Data throughout the App, and with time always being an issue having a state with all the Data saves time and code.
+
+
+
+
+
+
+
+  
 
 ## Project Set Up
 
