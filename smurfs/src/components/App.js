@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>SMURFS! 2.0 W/ Redux</h1>
-        <div>Have fun!</div>
+        <div>Get Updated Smurfs List</div>
         <SmurfData />
         <SmurfsForm />
       </div>

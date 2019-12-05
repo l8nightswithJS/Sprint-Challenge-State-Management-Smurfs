@@ -7,7 +7,7 @@ const initialState = {
             name: 'Brainey', 
             age: 0, 
             height: '', 
-            id: Date.now()
+            id: 0
         }
     ],
     isLoading: false,
@@ -20,7 +20,7 @@ export const reducer = (state = initialState, action) => {
         case SMURFS_LOADING_START:
           return {
             ...state,
-            isLoading: true
+            isLoading: false
           };
         case SMURFS_LOADING_SUCCESS:
           return {
