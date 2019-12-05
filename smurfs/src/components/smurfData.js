@@ -12,7 +12,7 @@ const SmurfData = props => {
               props.getSmurfsData();
             }}
           >
-            get random smurf
+            Smurfs
           </button>
           {props.error && <div>{props.error}</div>}
           {props.isLoading ? (
@@ -25,6 +25,7 @@ const SmurfData = props => {
             </>
           )}
         </>
+        
       );
 }
 

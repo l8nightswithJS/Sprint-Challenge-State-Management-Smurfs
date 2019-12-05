@@ -5,8 +5,23 @@ export const SMURFS_LOADING_SUCCESS = 'SMURFS_LOADING_SUCCESS';
 export const SMURFS_LOADING_FAILED = 'SMURFS_LOADING_FAILED';
 export const ADD_NEW_SMURF = 'ADD_NEW_SMURF';
 // export const
-export const addNewSmurf = () => dispatch => {
-    dispatch({ type: ADD_NEW_SMURF});
+export const addNewSmurf = (props) => dispatch => {
+    console.log(props)
+
+    dispatch({ 
+        type: ADD_NEW_SMURF,
+        payload: props
+    });
+    // axios.post(`http://localhost:3333/smurfs/`, )
+    //   .then(res => {
+    //     dispatch({ 
+    //         type: ADD_NEW_SMURF,
+    //         payload: props.smurf
+    //     });  
+    //     console.log(res);
+    //     console.log(res.data);
+    //   })
+    
 }
 
 export const getSmurfsData =  () => dispatch => {
@@ -14,14 +29,19 @@ export const getSmurfsData =  () => dispatch => {
 
     axios
         .get('http://localhost:3333/smurfs/')
-        .then(res => { 
-            dispatch({
-                type: SMURFS_LOADING_SUCCESS,
-                payload: (res.data[0])
-                })
-            console.log(res.data);    
-            }
-        )
+        .then(res => {
+            res.data.map(i => {
+                dispatch(
+                    {
+                    type: SMURFS_LOADING_SUCCESS,
+                    payload: (res.data[i.id])
+                    }
+                )
+                console.log(res.data);    
+                }
+            )
+        }) 
+            
         .catch(err => console.log(err));
 }
 
