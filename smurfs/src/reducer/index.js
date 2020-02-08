@@ -40,6 +40,12 @@ export const reducer = (state = initialState, action) => {
             error: action.payload,
             isLoading: false
           };
+        case DELETE_SMURF:
+          return {
+            ...state,
+            smurf: action.payload,
+            isLoading: false
+          }  
         default:
           return state;
       }

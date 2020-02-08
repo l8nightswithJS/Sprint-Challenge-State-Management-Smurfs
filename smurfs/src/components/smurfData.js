@@ -22,7 +22,7 @@ const SmurfData = props => {
             {props.smurf.map(data => {
               if(data.id < 10) {
                 return(
-                  <div>
+                  <div key={data.id}>
                     
                     <SmurfCard name={data.name} age={data.age} height={data.height} />
                     
