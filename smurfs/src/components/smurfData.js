@@ -24,7 +24,7 @@ const SmurfData = props => {
                 return(
                   <div key={data.id}>
                     
-                    <SmurfCard name={data.name} age={data.age} height={data.height} />
+                    <SmurfCard name={data.name} age={data.age} height={data.height} id={data.id} />
                     
                   </div>
                 )

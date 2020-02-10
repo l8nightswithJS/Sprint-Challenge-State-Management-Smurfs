@@ -4,6 +4,7 @@ export const SMURFS_LOADING_START = 'SMURFS_LOADING_START';
 export const SMURFS_LOADING_SUCCESS = 'SMURFS_LOADING_SUCCESS';
 export const SMURFS_LOADING_FAILED = 'SMURFS_LOADING_FAILED';
 export const ADD_NEW_SMURF = 'ADD_NEW_SMURF';
+export const DELETE_SMURF = 'DELETE_SMURF';
 
 // export const
 export const addNewSmurf = (props) => dispatch => {
@@ -43,9 +44,11 @@ export const getSmurfsData =  () => dispatch => {
 }
 
 export const deleteSmurf = (props) => dispatch => {
-    dispatch({ type: DELETE_SMURF});
+    console.log(props);
+    // dispatch({ type: DELETE_SMURF});
 
     axios
-        .delete(`http:localhost:3333/smurfs/${props.id}`)
+        .delete(`http://localhost:3333/smurfs/${props}`)
+        
         console.log(props);
 }

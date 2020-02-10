@@ -1,4 +1,4 @@
-import { SMURFS_LOADING_START, SMURFS_LOADING_SUCCESS, SMURFS_LOADING_FAILED, ADD_NEW_SMURF } from '../actions/index.js';
+import { SMURFS_LOADING_START, SMURFS_LOADING_SUCCESS, SMURFS_LOADING_FAILED, ADD_NEW_SMURF, DELETE_SMURF } from '../actions/index.js';
 
 
 const initialState = {
